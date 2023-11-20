@@ -37,14 +37,12 @@ Após criar o produto, é enviado uma mensagem via tópico utilizando o kafka pa
 ![consumer-post](img/consumer-post.png)
 A mensagem no kafDrop
 ![message-post](img/message.png)
+
+As operações http PUT e Delete funcionam de forma semelhante, após deletar ou atualizar é enviado a mensagem:
 ![put](img/put.png)
 ![delete](img/delete.png)
 ![message-put](img/message-put.png)
 ![message-delete](img/message-delete.png)
-
-
-As operações http PUT e Delete funcionam de forma semelhante, após deletar ou atualizar é enviado a mensagem:
-
 
 
 ## 🤝 Perfil do dev
