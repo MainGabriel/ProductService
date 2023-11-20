@@ -3,6 +3,7 @@
 - 📈 [Sobre o projeto](#about)
 - 🤖 [Tecnologias](#technologies)
 - 🧑‍🔧[Dependências](#dependencies)
+- 💻[Funcionamento](#operation)
 
 <h2 id="about">📈 Sobre o projeto</h2> 
 
@@ -17,6 +18,7 @@ Além disso, a cada ação de criação, atualização ou exclusão, a aplicaç�
 - **MySql**
 - **Postman**
 - **Docker**
+- **Kafdrop**
 
 <h2 id="dependencies">🧑‍🔧 Dependências</h2>  
 
@@ -26,6 +28,24 @@ Além disso, a cada ação de criação, atualização ou exclusão, a aplicaç�
 - **Flyway**: O Flyway permite que você versione e controle suas migrações de esquema de banco de dados de maneira controlada por código.
 - **Springdoc OpenAPI**: É uma ferramenta que gera automaticamente documentação da API com base nos controladores RESTful do Spring Boot. Facilita a criação de documentação interativa da API usando o padrão OpenAPI (anteriormente conhecido como Swagger).
 - **JUnit**: São bibliotecas de teste para Java.
+
+<h2 id="operation">💻 Funcionamento do Projeto</h2>  
+
+Enviando uma requisição para criar o produto, passando o payload e retornando 201 created.
+![endpoint-post](img/post.png)
+Após criar o produto, é enviado uma mensagem via tópico utilizando o kafka para o projeto histórico de produtos, nesta imagem é um log consumindo a mensagem.
+![consumer-post](img/consumer-post.png)
+A mensagem no kafDrop
+![message-post](img/message.png)
+![put](img/put.png)
+![delete](img/delete.png)
+![message-put](img/message-put.png)
+![message-delete](img/message-delete.png)
+
+
+As operações http PUT e Delete funcionam de forma semelhante, após deletar ou atualizar é enviado a mensagem:
+
+
 
 ## 🤝 Perfil do dev
 
